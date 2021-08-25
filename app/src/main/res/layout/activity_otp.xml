@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/label_desc"
+        style="@style/TextView.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_x2x"
+        android:gravity="center"
+        android:text="@string/please_enter_otp"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl1st"
+        style="@style/TextView.OTP"
+        android:layout_marginStart="@dimen/dimen_2x"
+        android:layout_marginTop="@dimen/dimen_2x"
+        app:layout_constraintEnd_toStartOf="@+id/lbl2nd"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_desc" />
+
+    <TextView
+        android:id="@+id/lbl2nd"
+        style="@style/TextView.OTP"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl1st"
+        app:layout_constraintEnd_toStartOf="@+id/lbl3rd"
+        app:layout_constraintStart_toEndOf="@+id/lbl1st" />
+
+    <TextView
+        android:id="@+id/lbl3rd"
+        style="@style/TextView.OTP"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl1st"
+        app:layout_constraintEnd_toStartOf="@+id/lbl4th"
+        app:layout_constraintStart_toEndOf="@+id/lbl2nd" />
+
+    <TextView
+        android:id="@+id/lbl4th"
+        style="@style/TextView.OTP"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl1st"
+        app:layout_constraintEnd_toStartOf="@+id/lbl5th"
+        app:layout_constraintStart_toEndOf="@+id/lbl3rd" />
+
+    <TextView
+        android:id="@+id/lbl5th"
+        style="@style/TextView.OTP"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl1st"
+        app:layout_constraintEnd_toStartOf="@+id/lbl6th"
+        app:layout_constraintStart_toEndOf="@+id/lbl4th" />
+
+    <TextView
+        android:id="@+id/lbl6th"
+        style="@style/TextView.OTP"
+        android:layout_marginEnd="@dimen/dimen_2x"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl1st"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl5th" />
+
+    <EditText
+        android:id="@+id/txtOtp"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        android:background="@color/transparent"
+        android:cursorVisible="false"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:maxLength="6"
+        android:textColor="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl1st"
+        app:layout_constraintEnd_toEndOf="@+id/lbl6th"
+        app:layout_constraintStart_toStartOf="@+id/lbl1st"
+        app:layout_constraintTop_toTopOf="@+id/lbl1st" />
+
+    <TextView
+        android:id="@+id/lblCodeExpire"
+        style="@style/TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_2x"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl1st" />
+</androidx.constraintlayout.widget.ConstraintLayout>

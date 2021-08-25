@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "405145336882",
+    "firebase_url": "https://vicall-prod.firebaseio.com",
+    "project_id": "vicall-prod",
+    "storage_bucket": "vicall-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405145336882:android:a94de44de8a50a91",
+        "android_client_info": {
+          "package_name": "vn.vano.vicall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405145336882-8j7crv88d9ogno21ddht818uaqfu10oj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vano.vicall",
+            "certificate_hash": "4dbcdedface11fddd6fd57cfaed6fa1159f39935"
+          }
+        },
+        {
+          "client_id": "405145336882-63g6gf97u5k3g4tomtndbn65hj4fg1co.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vano.vicall",
+            "certificate_hash": "4ce4d5b61f6d3f0203bdf710356622269b1d379e"
+          }
+        },
+        {
+          "client_id": "405145336882-gq4bhe96c8kk4obou4nn7kji0kde3orv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vano.vicall",
+            "certificate_hash": "6164db0d917d50a9a7186bb0e57a6e7fb03232fb"
+          }
+        },
+        {
+          "client_id": "405145336882-ckg91l5370ean9fsorko644fsacddk93.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vano.vicall",
+            "certificate_hash": "8aba87830fdc80e1f9d4b5806fcac54ffc07632f"
+          }
+        },
+        {
+          "client_id": "405145336882-gd8reen2ptkkjkgn0pj5m36pvpqn03s0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvTPoSpBZVxjoeVFdWmRaBywhcYJ0mcd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405145336882-gd8reen2ptkkjkgn0pj5m36pvpqn03s0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "405145336882-ifo4qsl51seo580d72h576prtkr1bdck.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Vano.ViCall.com.vn"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

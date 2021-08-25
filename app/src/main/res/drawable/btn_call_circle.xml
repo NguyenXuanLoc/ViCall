@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:colorControlHighlight">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorPrimary" />
+            <corners android:radius="@dimen/dimen_8x" />
+            <stroke
+                android:width="@dimen/divider"
+                android:color="@color/white" />
+        </shape>
+    </item>
+
+    <item
+        android:width="@dimen/dimen_5x"
+        android:height="@dimen/dimen_5x"
+        android:bottom="@dimen/dimen_x3x"
+        android:drawable="@drawable/ic_call_white"
+        android:left="@dimen/dimen_x3x"
+        android:right="@dimen/dimen_x3x"
+        android:top="@dimen/dimen_x3x" />
+</ripple>
+

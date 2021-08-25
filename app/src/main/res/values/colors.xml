@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#006CFF</color>
+    <color name="colorPrimaryDark">#006CFF</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="textColorPrimary">#1A051D</color>
+    <color name="textColorPrimary75">#BF1A051D</color>
+    <color name="textColorSecondary">#999999</color>
+    <color name="dividerColor">#EFEFEF</color>
+
+    <!-- Other colors -->
+    <color name="buttonPrimary">#00A2E9</color>
+    <color name="white">#ffffff</color>
+    <color name="white25">#40ffffff</color>
+    <color name="white50">#80ffffff</color>
+    <color name="white85">#d9ffffff</color>
+    <color name="blur">#F6F4F4</color>
+    <color name="black">#000000</color>
+    <color name="black25">#40000000</color>
+    <color name="black60">#99000000</color>
+    <color name="lightGrey">#EEF1FF</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="greyBold">#4F4F4F</color>
+    <color name="transparent">#00000000</color>
+    <color name="buttonDisable">#EFEFEF</color>
+    <color name="orange">#FF5722</color>
+    <color name="yellow">#F2994A</color>
+    <color name="green">#01B01D</color>
+    <color name="greenDark">#00C48C</color>
+    <color name="purple">#9B51E0</color>
+    <color name="bluePurple">#606CFF</color>
+    <color name="purple100">#6C1CFB</color>
+    <color name="blueDark">#384F7D</color>
+    <color name="brown">#8B5E3C</color>
+    <color name="red">#DB3F29</color>
+    <color name="blue">#3993E3</color>
+</resources>

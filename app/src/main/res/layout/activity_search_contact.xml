@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarSearchContact"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/white"
+            app:contentInsetStart="@dimen/zero"
+            app:contentInsetStartWithNavigation="@dimen/zero">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent">
+
+                <EditText
+                    android:id="@+id/txtSearch"
+                    style="@style/EditText.Regular"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_2x"
+                    android:autofillHints="@string/search_name_or_phone"
+                    android:background="@drawable/bg_search_box"
+                    android:drawableStart="@drawable/ic_search_grey"
+                    android:drawablePadding="@dimen/dimen_x1x"
+                    android:hint="@string/search_name_or_phone"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingTop="@dimen/dimen_1x"
+                    android:paddingBottom="@dimen/dimen_1x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/zero"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/btn_circle_white_transparent_25"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/dimen_x1x"
+                    android:src="@drawable/ic_close_black"
+                    android:tint="@color/grey"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtSearch"
+                    app:layout_constraintEnd_toEndOf="@+id/txtSearch"
+                    app:layout_constraintTop_toTopOf="@+id/txtSearch" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cstContacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/label_contact"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:text="@string/result"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorSecondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_1x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor"
+            app:layout_constraintBottom_toBottomOf="@+id/label_contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/label_contact"
+            app:layout_constraintTop_toTopOf="@+id/label_contact" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclContacts"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:layout_marginStart="@dimen/dimen_2x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_contact" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

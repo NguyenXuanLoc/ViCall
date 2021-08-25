@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvAvt"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_marginTop="@dimen/dimen_x2x"
+        android:contentDescription="@string/app_name"
+        app:actualImageResource="@drawable/ic_mask_with_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundAsCircle="true" />
+
+    <ImageView
+        android:layout_width="@dimen/dimen_3x"
+        android:layout_height="@dimen/dimen_3x"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_camera_black"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/sdvAvt"
+        app:layout_constraintEnd_toEndOf="@+id/sdvAvt"
+        app:layout_constraintStart_toStartOf="@+id/sdvAvt"
+        app:layout_constraintTop_toTopOf="@+id/sdvAvt" />
+
+    <EditText
+        android:id="@+id/txtName"
+        style="@style/EditText.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_3x"
+        android:layout_marginTop="@dimen/dimen_x2x"
+        android:layout_marginEnd="@dimen/dimen_3x"
+        android:background="@drawable/bg_radius_white_grey_border"
+        android:drawableStart="@drawable/thumb_user_grey"
+        android:drawablePadding="@dimen/dimen_x1x"
+        android:hint="@string/we_can_call_you_is"
+        android:imeOptions="actionDone"
+        android:inputType="textCapWords"
+        android:maxLength="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sdvAvt" />
+
+    <TextView
+        android:id="@+id/lblSex"
+        style="@style/TextView.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_3x"
+        android:layout_marginTop="@dimen/dimen_2x"
+        android:layout_marginEnd="@dimen/dimen_3x"
+        android:background="@drawable/bg_radius_white_grey_border"
+        android:drawableStart="@drawable/ic_sex_grey"
+        android:drawableEnd="@drawable/ic_triangle_grey"
+        android:drawablePadding="@dimen/dimen_x1x"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:paddingStart="@dimen/dimen_2x"
+        android:paddingTop="@dimen/dimen_x1x"
+        android:paddingEnd="@dimen/dimen_2x"
+        android:paddingBottom="@dimen/dimen_x1x"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/lblBirthday"
+        style="@style/TextView.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_3x"
+        android:layout_marginTop="@dimen/dimen_2x"
+        android:layout_marginEnd="@dimen/dimen_3x"
+        android:background="@drawable/bg_radius_white_grey_border"
+        android:drawableStart="@drawable/ic_birthday_cake_grey"
+        android:drawableEnd="@drawable/ic_triangle_grey"
+        android:drawablePadding="@dimen/dimen_x1x"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:hint="@string/birthday"
+        android:paddingStart="@dimen/dimen_2x"
+        android:paddingTop="@dimen/dimen_x1x"
+        android:paddingEnd="@dimen/dimen_2x"
+        android:paddingBottom="@dimen/dimen_x1x"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSex" />
+
+    <TextView
+        android:id="@+id/btnConfirm"
+        style="@style/Button.PrimaryNotRadius"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <vn.vano.vicall.widget.LayoutImageChooser
+        android:id="@+id/imgChooser"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

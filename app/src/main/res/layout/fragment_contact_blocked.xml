@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swpContactBlocked"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclContactBlocked"
+            android:layout_width="match_parent"
+            android:paddingStart="@dimen/dimen_2x"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_2x" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/lblNoData"
+        style="@style/TextView.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_4x"
+        android:layout_marginEnd="@dimen/dimen_4x"
+        android:drawableTop="@drawable/img_no_call"
+        android:drawablePadding="@dimen/dimen_1x"
+        android:gravity="center_horizontal"
+        android:text="@string/no_contact_blocked"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llPermission"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextView.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:drawableTop="@drawable/img_permission_call_log"
+            android:drawablePadding="@dimen/dimen_x2x"
+            android:gravity="center_horizontal"
+            android:text="@string/desc_default_dialer_permission"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/lblGrant"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dimen_1x"
+            android:text="@string/grant_right_now"
+            android:textColor="@color/buttonPrimary"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_1x">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_thumb"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundBottomEnd="true"
+        app:roundBottomStart="true"
+        app:roundTopEnd="true"
+        app:roundTopStart="true"
+        app:roundedCornerRadius="@dimen/dimen_1x" />
+
+    <TextView
+        android:id="@+id/lbl_price"
+        style="@style/TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_1x"
+        android:layout_marginEnd="@dimen/dimen_1x"
+        android:background="@drawable/bg_circle_black_transparent_25"
+        android:paddingStart="@dimen/dimen_1x"
+        android:paddingTop="@dimen/dimen_05x"
+        android:paddingEnd="@dimen/dimen_1x"
+        android:paddingBottom="@dimen/dimen_05x"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sdv_thumb" />
+
+    <TextView
+        android:id="@+id/lbl_status"
+        style="@style/TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_1x"
+        android:layout_marginEnd="@dimen/dimen_1x"
+        android:background="@drawable/bg_circle_yellow"
+        android:paddingStart="@dimen/dimen_1x"
+        android:paddingTop="@dimen/dimen_05x"
+        android:paddingEnd="@dimen/dimen_1x"
+        android:paddingBottom="@dimen/dimen_05x"
+        android:text="@string/wait_for_approving"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sdv_thumb" />
+
+    <ImageView
+        android:id="@+id/img_applied"
+        android:layout_width="@dimen/dimen_x2x"
+        android:layout_height="@dimen/dimen_x2x"
+        android:layout_marginTop="@dimen/dimen_1x"
+        android:layout_marginEnd="@dimen/dimen_1x"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_tick_orange"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_download_count"
+        style="@style/TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_1x"
+        android:layout_marginBottom="@dimen/dimen_1x"
+        android:drawableStart="@drawable/ic_download_white"
+        android:drawablePadding="@dimen/dimen_05x"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/sdv_thumb"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_duration"
+        style="@style/TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_1x"
+        android:layout_marginBottom="@dimen/dimen_1x"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/sdv_thumb"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

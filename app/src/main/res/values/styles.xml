@@ -1,0 +1,221 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="WhiteTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionMenuTextColor">@color/blue</item>
+    </style>
+
+    <style name="TransparentStatusTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="IncomingCallTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/layer_splash</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+    <!-- End of themes -->
+
+    <!-- Toolbar -->
+    <style name="PopUpTheme" parent="@style/ThemeOverlay.MaterialComponents.Light">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="ToolBarStyle">
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
+        <item name="android:popupTheme">@style/PopUpTheme</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:elevation">@dimen/dimen_05x</item>
+        <item name="android:contentInsetEnd">@dimen/zero</item>
+        <item name="contentInsetEndWithActions">@dimen/zero</item>
+        <item name="android:contentInsetStart">@dimen/zero</item>
+        <item name="contentInsetStartWithNavigation">@dimen/zero</item>
+    </style>
+    <!-- End of Toolbar -->
+
+    <!-- Button styles -->
+    <style name="Button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingBottom">@dimen/dimen_x1x</item>
+        <item name="android:paddingTop">@dimen/dimen_x1x</item>
+        <item name="android:paddingStart">@dimen/dimen_2x</item>
+        <item name="android:paddingEnd">@dimen/dimen_2x</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Button.Primary">
+        <item name="android:background">@drawable/btn_primary</item>
+    </style>
+
+    <style name="Button.PrimaryNotRadius">
+        <item name="android:background">@drawable/btn_primary_not_radius</item>
+    </style>
+
+    <style name="Button.Disable">
+        <item name="android:background">@drawable/btn_disable</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="Button.Green">
+        <item name="android:background">@drawable/btn_green</item>
+    </style>
+
+    <style name="Button.Black25">
+        <item name="android:background">@drawable/btn_circle_black_transparent_25</item>
+    </style>
+
+    <style name="Button.White25">
+        <item name="android:background">@drawable/btn_circle_white_transparent_25</item>
+    </style>
+
+    <style name="Button.RedNotRadius">
+        <item name="android:background">@drawable/btn_red_not_radius</item>
+    </style>
+
+    <style name="Button.PurpleNotRadius">
+        <item name="android:background">@drawable/btn_purple_not_radius</item>
+    </style>
+
+    <style name="Button.BlueRadius">
+        <item name="android:background">@drawable/btn_blue_radius</item>
+    </style>
+
+    <style name="Button.BlueStroke">
+        <item name="android:background">@drawable/btn_blue_stroke_radius</item>
+    </style>
+
+    <style name="Button.Orange">
+        <item name="android:background">@drawable/btn_orange</item>
+    </style>
+
+    <style name="Button.YellowNotRadius">
+        <item name="android:background">@drawable/btn_yellow_not_radius</item>
+    </style>
+    <!-- End of button -->
+
+    <!-- Textview style -->
+    <style name="TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextView.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextView.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextView.Regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextView.Light">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+    <style name="TextView.OTP">
+        <item name="android:layout_width">@dimen/dimen_6x</item>
+        <item name="android:layout_height">@dimen/dimen_6x</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_otp_input</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextView.Key">
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_28</item>
+        <item name="android:paddingTop">@dimen/dimen_x1x</item>
+        <item name="android:paddingBottom">@dimen/dimen_x1x</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="elevation">@dimen/dimen_1x</item>
+        <item name="android:foreground">?android:selectableItemBackgroundBorderless</item>
+    </style>
+    <!-- End of Textview -->
+
+    <!-- EditText -->
+    <style name="EditText" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:autofillHints">@string/app_name</item>
+        <item name="android:paddingStart">@dimen/dimen_2x</item>
+        <item name="android:paddingEnd">@dimen/dimen_2x</item>
+        <item name="android:paddingTop">@dimen/dimen_x1x</item>
+        <item name="android:paddingBottom">@dimen/dimen_x1x</item>
+    </style>
+
+    <style name="EditText.Regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="EditText.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="EditText.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <!-- End of EditText -->
+
+    <!-- TabLayout -->
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/white</item>
+        <item name="tabIndicatorColor">@color/orange</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabIndicator">@drawable/tab_indicator</item>
+        <item name="tabPadding">@dimen/zero</item>
+        <item name="tabTextColor">@color/textColorSecondary</item>
+        <item name="tabSelectedTextColor">@color/textColorPrimary</item>
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!-- End of TabLayout -->
+
+    <!--    BottomSheet-->
+    <style name="BottomSheepDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheepStyle</item>
+    </style>
+
+    <style name="BottomSheepStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:targetApi="29">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPlayer"
+        style="@style/ToolBarStyle"
+        android:layout_width="@dimen/zero"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@id/exo_prev"
+        style="@style/ExoMediaButton.Previous"
+        android:layout_width="@dimen/dimen_x5x"
+        android:layout_height="@dimen/dimen_x5x"
+        android:layout_marginEnd="@dimen/dimen_6x"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/frl_play"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frl_play"
+        android:layout_width="@dimen/dimen_x5x"
+        android:layout_height="@dimen/dimen_x5x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@id/exo_play"
+            style="@style/ExoMediaButton.Play"
+            android:layout_width="@dimen/dimen_x5x"
+            android:layout_height="@dimen/dimen_x5x"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <ImageButton
+            android:id="@id/exo_pause"
+            style="@style/ExoMediaButton.Pause"
+            android:layout_width="@dimen/dimen_x5x"
+            android:layout_height="@dimen/dimen_x5x"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@id/exo_next"
+        style="@style/ExoMediaButton.Next"
+        android:layout_width="@dimen/dimen_x5x"
+        android:layout_height="@dimen/dimen_x5x"
+        android:layout_marginStart="@dimen/dimen_6x"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frl_play"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llAction"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:background="@color/black60"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_1x"
+        android:paddingBottom="@dimen/dimen_1x"
+        app:layout_constraintBottom_toTopOf="@+id/cst_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lblApply"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_apply_black"
+            android:drawablePadding="@dimen/dimen_1x"
+            android:drawableTint="@color/white"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:text="@string/apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/lblBuyVideo"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_3x"
+            android:layout_marginEnd="@dimen/dimen_3x"
+            android:drawableTop="@drawable/ic_buy_video_black"
+            android:drawablePadding="@dimen/dimen_1x"
+            android:drawableTint="@color/white"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:text="@string/buy_video"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lblGiveFriend"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_gift_black"
+            android:drawablePadding="@dimen/dimen_1x"
+            android:drawableTint="@color/white"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:text="@string/give_friend"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lblDelete"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_3x"
+            android:drawableTop="@drawable/ic_delete_black"
+            android:drawablePadding="@dimen/dimen_1x"
+            android:drawableTint="@color/white"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:text="@string/delete_video"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_progress"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:background="@color/black60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@id/exo_position"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFullScreen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgFullScreen" />
+
+        <TextView
+            android:id="@+id/label_slash"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_05x"
+            android:text="/"
+            android:textColor="@color/grey"
+            app:layout_constraintBaseline_toBaselineOf="@+id/exo_position"
+            app:layout_constraintStart_toEndOf="@+id/exo_position" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_05x"
+            android:textColor="@color/grey"
+            app:layout_constraintBaseline_toBaselineOf="@+id/exo_position"
+            app:layout_constraintStart_toEndOf="@+id/label_slash" />
+
+        <ImageView
+            android:id="@+id/imgFullScreen"
+            android:layout_width="@dimen/dimen_4x"
+            android:layout_height="@dimen/dimen_4x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:contentDescription="@string/app_name"
+            android:foreground="?android:selectableItemBackground"
+            android:src="@drawable/ic_full_screen_black"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@id/exo_progress_placeholder"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/dimen_26"
+            android:layout_marginStart="@dimen/dimen_1x"
+            android:layout_marginEnd="@dimen/dimen_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFullScreen" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

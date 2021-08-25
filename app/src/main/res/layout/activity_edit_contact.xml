@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvAvatar"
+                android:layout_width="@dimen/dimen_90"
+                android:layout_height="@dimen/dimen_90"
+                app:actualImageResource="@drawable/ic_mask_with_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundAsCircle="true"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_3x"
+                android:layout_height="@dimen/dimen_3x"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_camera_black"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/sdvAvatar"
+                app:layout_constraintEnd_toEndOf="@+id/sdvAvatar"
+                app:layout_constraintStart_toStartOf="@+id/sdvAvatar"
+                app:layout_constraintTop_toTopOf="@+id/sdvAvatar" />
+
+            <EditText
+                android:id="@+id/edtName"
+                style="@style/EditText.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_2x"
+                android:background="@drawable/bg_radius_grey_border"
+                android:drawableLeft="@drawable/ic_personal_grey"
+                android:drawablePadding="@dimen/dimen_1x"
+                android:hint="@string/name"
+                android:paddingStart="@dimen/dimen_2x"
+                android:paddingTop="@dimen/dimen_2x"
+                android:paddingEnd="@dimen/dimen_4x"
+                android:paddingBottom="@dimen/dimen_2x"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sdvAvatar"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imgDeleteName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_2x"
+                android:src="@drawable/ic_delete_circle_grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/edtName"
+                app:layout_constraintRight_toRightOf="@id/edtName"
+                app:layout_constraintTop_toTopOf="@id/edtName"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/edtCompany"
+                style="@style/EditText.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_2x"
+                android:background="@drawable/bg_radius_grey_border"
+                android:drawableLeft="@drawable/ic_company_grey"
+                android:drawablePadding="@dimen/dimen_1x"
+                android:hint="@string/company"
+                android:padding="@dimen/dimen_2x"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtName"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/v_line1"
+                android:layout_width="@dimen/zero"
+                android:layout_height="@dimen/dimen_2x"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:background="@color/lightGrey"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtCompany"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/edtNumber"
+                style="@style/EditText.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_2x"
+                android:background="@drawable/bg_radius_grey_border"
+                android:drawableLeft="@drawable/ic_phone_grey"
+                android:drawablePadding="@dimen/dimen_1x"
+                android:hint="@string/phone"
+                android:padding="@dimen/dimen_2x"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_line1"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                style="@style/EditText.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_2x"
+                android:background="@drawable/bg_radius_grey_border"
+                android:drawableLeft="@drawable/ic_location_grey"
+                android:drawablePadding="@dimen/dimen_1x"
+                android:hint="@string/add_address"
+                android:padding="@dimen/dimen_2x"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtNumber"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                style="@style/EditText.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_2x"
+                android:background="@drawable/bg_radius_grey_border"
+                android:drawableLeft="@drawable/ic_email_grey"
+                android:drawablePadding="@dimen/dimen_1x"
+                android:hint="@string/email"
+                android:padding="@dimen/dimen_2x"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtAddress"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/v_line2"
+                android:layout_width="@dimen/zero"
+                android:layout_height="@dimen/dimen_2x"
+                android:background="@color/lightGrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtEmail"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/lblDelete"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_2x"
+                android:text="@string/delete_contact"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_line2"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <vn.vano.vicall.widget.LayoutImageChooser
+        android:id="@+id/imgChooser"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

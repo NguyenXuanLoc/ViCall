@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_white_not_radius"
+    android:paddingTop="@dimen/dimen_2x"
+    android:paddingBottom="@dimen/dimen_2x">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_notification"
+        android:layout_width="@dimen/dimen_5x"
+        android:layout_height="@dimen/dimen_5x"
+        android:padding="@dimen/dimen_x1x"
+        app:actualImageResource="@drawable/ic_mask"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/lbl_title"
+        style="@style/TextView.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_2x"
+        android:layout_marginEnd="@dimen/dimen_2x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/lbl_content"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_time"
+        app:layout_constraintStart_toEndOf="@id/sdv_notification"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/lbl_content"
+        style="@style/TextView.Regular"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_title"
+        app:layout_constraintStart_toStartOf="@+id/lbl_title"
+        app:layout_constraintTop_toBottomOf="@id/lbl_title"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/lbl_time"
+        style="@style/TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_2x"
+        android:gravity="end"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

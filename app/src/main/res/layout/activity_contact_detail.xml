@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/dimen_2x">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvAvatar"
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dimen_100"
+                app:actualImageResource="@drawable/ic_mask_with_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundAsCircle="true" />
+
+            <ImageView
+                android:id="@+id/imgViCallBadge"
+                android:layout_width="@dimen/dimen_x3x"
+                android:layout_height="@dimen/dimen_x3x"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bg_circle_buttonprimary_border_white"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dimen_6"
+                android:src="@drawable/ic_call_id_black"
+                android:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/sdvAvatar"
+                app:layout_constraintTop_toTopOf="@+id/sdvAvatar" />
+
+            <TextView
+                android:id="@+id/lblName"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:textSize="@dimen/text_size_17"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sdvAvatar" />
+
+            <TextView
+                android:id="@+id/lblStatus"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblName" />
+
+            <ImageView
+                android:id="@+id/imgCall"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:background="@drawable/btn_circle_blue"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dimen_x1x"
+                android:src="@drawable/ic_call_black"
+                android:tint="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/imgMessage"
+                app:layout_constraintTop_toBottomOf="@id/lblStatus" />
+
+            <ImageView
+                android:id="@+id/imgMessage"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:background="@drawable/btn_circle_green_dark"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dimen_x1x"
+                android:src="@drawable/ic_message_while"
+                app:layout_constraintLeft_toRightOf="@id/imgCall"
+                app:layout_constraintRight_toLeftOf="@id/imgSpam"
+                app:layout_constraintTop_toTopOf="@id/imgCall" />
+
+            <ImageView
+                android:id="@+id/imgSpam"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:background="@drawable/btn_circle_yellow"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dimen_x1x"
+                android:src="@drawable/ic_spam_purple"
+                app:layout_constraintEnd_toStartOf="@+id/imgBlock"
+                app:layout_constraintStart_toEndOf="@id/imgMessage"
+                app:layout_constraintTop_toTopOf="@id/imgCall" />
+
+            <ImageView
+                android:id="@+id/imgBlock"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:background="@drawable/btn_circle_red"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dimen_x1x"
+                android:src="@drawable/ic_block_red"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgSpam"
+                app:layout_constraintTop_toTopOf="@id/imgCall" />
+
+            <TextView
+                android:id="@+id/lbl_call"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:text="@string/call"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintEnd_toEndOf="@+id/imgCall"
+                app:layout_constraintStart_toStartOf="@+id/imgCall"
+                app:layout_constraintTop_toBottomOf="@id/imgCall" />
+
+            <TextView
+                android:id="@+id/lbl_message"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:text="@string/message"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintEnd_toEndOf="@+id/imgMessage"
+                app:layout_constraintStart_toStartOf="@id/imgMessage"
+                app:layout_constraintTop_toBottomOf="@id/imgCall" />
+
+            <TextView
+                android:id="@+id/lbl_spam"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:text="@string/spam"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintEnd_toEndOf="@id/imgSpam"
+                app:layout_constraintStart_toStartOf="@id/imgSpam"
+                app:layout_constraintTop_toBottomOf="@id/imgCall" />
+
+            <TextView
+                android:id="@+id/lblBlock"
+                style="@style/TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:text="@string/block"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/imgBlock"
+                app:layout_constraintStart_toStartOf="@id/imgBlock"
+                app:layout_constraintTop_toBottomOf="@id/imgCall" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dimen_2x"
+            android:paddingEnd="@dimen/dimen_2x">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cstCallInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblTime"
+                    style="@style/TextView.Regular"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_2x"
+                    app:layout_constraintEnd_toStartOf="@+id/lblDuration"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblCallType"
+                    style="@style/TextView.Regular"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintEnd_toEndOf="@+id/lblTime"
+                    app:layout_constraintStart_toStartOf="@+id/lblTime"
+                    app:layout_constraintTop_toBottomOf="@+id/lblTime" />
+
+                <TextView
+                    android:id="@+id/lblDuration"
+                    style="@style/TextView.Regular"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lblTime"
+                    app:layout_constraintTop_toTopOf="@+id/lblTime" />
+
+                <View
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/divider"
+                    android:layout_marginTop="@dimen/dimen_2x"
+                    android:background="@color/dividerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCallType" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:text="@string/phone"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/lblPhoneNumber"
+                style="@style/TextView.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:layout_marginBottom="@dimen/dimen_2x" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstVideoCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/white"
+            android:padding="@dimen/dimen_2x"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/label_video"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/video_call"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdvVideoThumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_video"
+                app:roundBottomEnd="true"
+                app:roundBottomStart="true"
+                app:roundTopEnd="true"
+                app:roundTopStart="true"
+                app:roundedCornerRadius="@dimen/dimen_1x" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lblInviteUseViCall"
+            style="@style/TextView.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@drawable/btn_white_not_radius"
+            android:padding="@dimen/dimen_2x"
+            android:text="@string/invite_sb_use_vicall"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

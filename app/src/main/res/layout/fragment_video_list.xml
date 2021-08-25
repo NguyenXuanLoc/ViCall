@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swpVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/dimen_1x"
+            android:paddingEnd="@dimen/dimen_1x" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/lblNoData"
+        style="@style/TextView.Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_4x"
+        android:layout_marginEnd="@dimen/dimen_4x"
+        android:drawableTop="@drawable/img_no_video"
+        android:drawablePadding="@dimen/dimen_1x"
+        android:gravity="center_horizontal"
+        android:text="@string/no_video"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone" />
+</FrameLayout>

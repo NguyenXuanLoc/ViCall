@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstDrawOnTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_draw_on_top"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/draw_over_top"
+                app:layout_constraintEnd_toStartOf="@+id/swchDrawOnTopPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_grant_draw_over_top_permission"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_draw_on_top"
+                app:layout_constraintStart_toStartOf="@+id/label_draw_on_top"
+                app:layout_constraintTop_toBottomOf="@+id/label_draw_on_top" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchDrawOnTopPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_storage"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/storage"
+                app:layout_constraintEnd_toStartOf="@+id/swchStoragePermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_grant_storage_permission"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_storage"
+                app:layout_constraintStart_toStartOf="@+id/label_storage"
+                app:layout_constraintTop_toBottomOf="@+id/label_storage" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchStoragePermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_contact"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                app:layout_constraintEnd_toStartOf="@+id/swchContactPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_grant_contact_permission"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_contact"
+                app:layout_constraintStart_toStartOf="@+id/label_contact"
+                app:layout_constraintTop_toBottomOf="@+id/label_contact" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchContactPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_phone"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                app:layout_constraintEnd_toStartOf="@+id/swchPhonePermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_grant_phone_permission"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_phone"
+                app:layout_constraintStart_toStartOf="@+id/label_phone"
+                app:layout_constraintTop_toBottomOf="@+id/label_phone" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchPhonePermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_camera"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/camera"
+                app:layout_constraintEnd_toStartOf="@+id/swchCameraPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_grant_camera_permission"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_camera"
+                app:layout_constraintStart_toStartOf="@+id/label_camera"
+                app:layout_constraintTop_toBottomOf="@+id/label_camera" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchCameraPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstCallLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_call_log"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/call_log"
+                app:layout_constraintEnd_toStartOf="@+id/swchCallLogPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_grant_call_log_permission"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_call_log"
+                app:layout_constraintStart_toStartOf="@+id/label_call_log"
+                app:layout_constraintTop_toBottomOf="@+id/label_call_log" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchCallLogPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_05x"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:text="@string/advance"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            style="@style/TextView.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:text="@string/desc_advance_permissions_for_caller_id"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/text_size_12" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstBatteryOptimization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_1x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_battery"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/battery_optimization"
+                app:layout_constraintEnd_toStartOf="@+id/swchBatteryPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_battery_optimization"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_battery"
+                app:layout_constraintStart_toStartOf="@+id/label_battery"
+                app:layout_constraintTop_toBottomOf="@+id/label_battery" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchBatteryPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_1x"
+            android:paddingBottom="@dimen/dimen_1x">
+
+            <TextView
+                android:id="@+id/label_accessibility"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/accessibility"
+                app:layout_constraintEnd_toStartOf="@+id/swchAccessibilityPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_accessibility"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_accessibility"
+                app:layout_constraintStart_toStartOf="@+id/label_accessibility"
+                app:layout_constraintTop_toBottomOf="@+id/label_accessibility" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swchAccessibilityPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstShowOnLockScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/label_lock_screen"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/show_on_lock_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_show_on_lock_screen"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_lock_screen"
+                app:layout_constraintStart_toStartOf="@+id/label_lock_screen"
+                app:layout_constraintTop_toBottomOf="@+id/label_lock_screen" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cstShowPopUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:layout_marginBottom="@dimen/dimen_2x"
+            android:background="@drawable/btn_white_not_radius"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/label_pop_up"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/show_pop_up"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_show_pop_up"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/label_pop_up"
+                app:layout_constraintStart_toStartOf="@+id/label_pop_up"
+                app:layout_constraintTop_toBottomOf="@+id/label_pop_up" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

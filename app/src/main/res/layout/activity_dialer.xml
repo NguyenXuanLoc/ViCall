@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layoutContacts"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclContacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_2x" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabKeyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_x2x"
+            android:layout_marginBottom="@dimen/dimen_2x"
+            android:src="@drawable/ic_dial_pad_white"
+            android:tintMode="@color/white"
+            app:fabSize="normal"
+            app:layout_anchor="@+id/rclContacts"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/llPermission"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/layoutKeyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextView.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:drawableTop="@drawable/img_permission_contact"
+            android:drawablePadding="@dimen/dimen_x2x"
+            android:gravity="center_horizontal"
+            android:text="@string/desc_contact_permission"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/lblGrant"
+            style="@style/TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2x"
+            android:layout_marginEnd="@dimen/dimen_2x"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dimen_1x"
+            android:text="@string/grant_right_now"
+            android:textColor="@color/buttonPrimary"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutKeyboard"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="@dimen/dimen_05x"
+                android:layout_marginBottom="@dimen/dimen_2x"
+                android:background="@drawable/bg_shadow_top"
+                app:layout_constraintBottom_toTopOf="@+id/txtDialNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgAddContact"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:contentDescription="@string/app_name"
+                android:foreground="?android:actionBarItemBackground"
+                android:padding="@dimen/dimen_x1x"
+                android:rotation="45"
+                android:src="@drawable/ic_clear_black"
+                android:tint="@color/colorPrimary"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/txtDialNumber"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk"
+                app:layout_constraintTop_toTopOf="@+id/txtDialNumber" />
+
+            <EditText
+                android:id="@+id/txtDialNumber"
+                style="@style/TextView.Regular"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2x"
+                android:background="@color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size_28"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnOne"
+                app:layout_constraintEnd_toStartOf="@+id/imgClear"
+                app:layout_constraintStart_toEndOf="@+id/imgAddContact" />
+
+            <ImageView
+                android:id="@+id/imgClear"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:contentDescription="@string/app_name"
+                android:foreground="?android:actionBarItemBackground"
+                android:padding="@dimen/dimen_6"
+                android:src="@drawable/ic_backspace_black"
+                android:tint="@color/grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txtDialNumber"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintTop_toTopOf="@+id/txtDialNumber" />
+
+            <TextView
+                android:id="@+id/btnOne"
+                style="@style/TextView.Key"
+                android:text="@string/number_one"
+                app:layout_constraintBottom_toTopOf="@+id/btnFour"
+                app:layout_constraintEnd_toEndOf="@+id/btnAsterisk"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk" />
+
+            <TextView
+                android:id="@+id/btnTwo"
+                style="@style/TextView.Key"
+                android:text="@string/number_two"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnOne"
+                app:layout_constraintEnd_toEndOf="@+id/btnZero"
+                app:layout_constraintStart_toStartOf="@+id/btnZero" />
+
+            <TextView
+                android:id="@+id/btnThree"
+                style="@style/TextView.Key"
+                android:text="@string/number_three"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnOne"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnShark" />
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="@dimen/divider"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toTopOf="@+id/btnFour"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk" />
+
+            <TextView
+                android:id="@+id/btnFour"
+                style="@style/TextView.Key"
+                android:text="@string/number_four"
+                app:layout_constraintBottom_toTopOf="@+id/btnSeven"
+                app:layout_constraintEnd_toEndOf="@+id/btnAsterisk"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk" />
+
+            <TextView
+                android:id="@+id/btnFive"
+                style="@style/TextView.Key"
+                android:text="@string/number_five"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnFour"
+                app:layout_constraintEnd_toEndOf="@+id/btnZero"
+                app:layout_constraintStart_toStartOf="@+id/btnZero" />
+
+            <TextView
+                android:id="@+id/btnSix"
+                style="@style/TextView.Key"
+                android:text="@string/number_six"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnFour"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnShark" />
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="@dimen/divider"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toTopOf="@+id/btnSeven"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk" />
+
+            <TextView
+                android:id="@+id/btnSeven"
+                style="@style/TextView.Key"
+                android:text="@string/number_seven"
+                app:layout_constraintBottom_toTopOf="@+id/btnAsterisk"
+                app:layout_constraintEnd_toEndOf="@+id/btnAsterisk"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk" />
+
+            <TextView
+                android:id="@+id/btnEight"
+                style="@style/TextView.Key"
+                android:text="@string/number_eight"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnSeven"
+                app:layout_constraintEnd_toEndOf="@+id/btnZero"
+                app:layout_constraintStart_toStartOf="@+id/btnZero" />
+
+            <TextView
+                android:id="@+id/btnNine"
+                style="@style/TextView.Key"
+                android:text="@string/number_nine"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnSeven"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnShark" />
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="@dimen/divider"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toTopOf="@+id/btnAsterisk"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnAsterisk" />
+
+            <TextView
+                android:id="@+id/btnAsterisk"
+                style="@style/TextView.Key"
+                android:layout_marginStart="@dimen/dimen_x2x"
+                android:layout_marginBottom="@dimen/dimen_2x"
+                android:text="@string/asterisk_symbol"
+                app:layout_constraintBottom_toTopOf="@+id/btnCall"
+                app:layout_constraintEnd_toStartOf="@+id/btnZero"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="@dimen/zero"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAsterisk"
+                app:layout_constraintStart_toEndOf="@+id/btnAsterisk"
+                app:layout_constraintTop_toTopOf="@+id/btnOne" />
+
+            <TextView
+                android:id="@+id/btnZero"
+                style="@style/TextView.Key"
+                android:text="@string/number_zero"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnAsterisk"
+                app:layout_constraintEnd_toStartOf="@+id/btnShark"
+                app:layout_constraintStart_toEndOf="@+id/btnAsterisk" />
+
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="@dimen/zero"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAsterisk"
+                app:layout_constraintStart_toEndOf="@+id/btnZero"
+                app:layout_constraintTop_toTopOf="@+id/btnOne" />
+
+            <TextView
+                android:id="@+id/btnShark"
+                style="@style/TextView.Key"
+                android:layout_marginEnd="@dimen/dimen_x2x"
+                android:text="@string/shark_symbol"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnAsterisk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnZero" />
+
+            <ImageView
+                android:id="@+id/btnCall"
+                android:layout_width="@dimen/dimen_7x"
+                android:layout_height="@dimen/dimen_7x"
+                android:layout_marginBottom="@dimen/dimen_2x"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_call_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnCollapse"
+                android:layout_width="@dimen/dimen_5x"
+                android:layout_height="@dimen/dimen_5x"
+                android:contentDescription="@string/app_name"
+                android:foreground="?android:actionBarItemBackground"
+                android:padding="@dimen/dimen_05x"
+                android:src="@drawable/ic_dial_pad_black"
+                android:tint="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/btnCall"
+                app:layout_constraintEnd_toEndOf="@+id/btnShark"
+                app:layout_constraintStart_toStartOf="@+id/btnShark"
+                app:layout_constraintTop_toTopOf="@+id/btnCall" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
